@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor-img">
+            <img src="img/cryptomonedas.png" alt="imagen de distintas criptomonedas">
+        </div>
+        <div class="contenedor-imput">
+            <form action="">
+                <fieldset class="fieldset">
+                    <legend>Ingrese la moneda de un pais</legend>
+                    <select name="select" id="pais" class="select">
+                        <option disabled selected value="">Elige una opcion</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Ingrese una moneda virtual</legend>
+                    <select name="select" id="moneda" class="select">
+                        <option disabled selected value="">Elige una opcion</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <div class="w-33">
+                        <div class="center">
+                            <button type="submit" class="boton" id="cotizar">
+                                cotizar
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="contenedor-resultado">
+            <h2 class="resultado-texto">Resultado</h2>
+            <div class="resultado" id="resultado"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
