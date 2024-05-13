@@ -13,32 +13,25 @@
             <img src="img/cryptomonedas.png" alt="imagen de distintas criptomonedas">
         </div>
         <div class="contenedor-imput">
-            <form action="">
+            <form action="" id="form">
                 <fieldset class="fieldset">
-                    <legend>Ingrese la moneda de un pais</legend>
-                    <select name="select" id="pais" class="select">
+                    <legend>Ingrese una divisa</legend>
+                    <select name="monedaPais" id="pais" class="select">
                         <option disabled selected value="">Elige una opcion</option>
                     </select>
                 </fieldset>
                 <fieldset class="fieldset">
                     <legend>Ingrese una moneda virtual</legend>
-                    <select name="select" id="moneda" class="select">
+                    <select name="cripto" id="moneda" class="select">
                         <option disabled selected value="">Elige una opcion</option>
                     </select>
                 </fieldset>
                 <fieldset class="fieldset">
-                    <div class="w-33">
-                        <div class="center">
-                            <button type="submit" class="boton" id="cotizar">
-                                cotizar
-                            </button>
-                        </div>
-                    </div>
+                    <button type="submit" class="boton" id="cotizar">cotizar</button>   
                 </fieldset>
             </form>
         </div>
         <div class="contenedor-resultado">
-            <h2 class="resultado-texto">Resultado</h2>
             <div class="resultado" id="resultado"></div>
         </div>
     </div>

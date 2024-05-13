@@ -58,6 +58,10 @@
 .select{
     width: 95%;
     padding: 0.3rem;
+}
+
+.select,
+.select option{
     background-color: var(--blanco);
 }
 
@@ -101,8 +105,23 @@
     grid-row: 4/7;
 }
 
-.resultado-texto{
-    margin: 0;
+.resultado{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.resultado p{
+    width: 100%;
+    margin: 0.5rem;
     text-align: center;
     color: var(--blanco);
+}
+
+.resultado span{
+    line-height: 1.5rem;
+    letter-spacing: 0.2rem; 
+    font-weight: 700;
+    text-transform: uppercase;
 }
