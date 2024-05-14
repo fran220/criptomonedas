@@ -78,9 +78,13 @@ function consultarApi(){
     console.log(cripto)
     const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cripto}&tsyms=${monedaPais}`;
 
+    showSpinner();
+
     fetch(url)
         .then(res => res.json())
-        .then(result => cotizar(result.DISPLAY[cripto][monedaPais]))
+        .then(result =>{ 
+            cotizar(result.DISPLAY[cripto][monedaPais]);
+        })
         .catch(err => {
             console.log(err)
             alert('hubo un error en tu consulta pruebe con otra divisa o moneda virtual')
@@ -89,7 +93,6 @@ function consultarApi(){
 
 function cotizar(criptomoneda){
     const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE} = criptomoneda;
-
     limipiarHtml();
 
     console.log('price',PRICE);
@@ -118,8 +121,20 @@ function cotizar(criptomoneda){
 }
 
 
-function spinner(){
+function showSpinner(){
+    limipiarHtml();
 
+    const divSpinner = document.createElement('div');
+    divSpinner.classList.add('spinner');
+
+    divSpinner.innerHTML = `
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    `;
+
+    resultado.appendChild(divSpinner);
+    
 }
 
 function limipiarHtml(){
